@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Vote agora</title>
+		<style>
+			html, body{
+				width:100%;height:100%;
+				padding:0;border:0;margin:0;
+				background: #C1CFEC;
+				font-family: arial;
+			}
+			.flex{
+				display: flex;
+			}
+			
+			input::-webkit-inner-spin-button {
+			    	-webkit-appearance: none;
+			   	margin: 0;
+			}
+			input{
+				outline: none;
+				height: 25px
+			}
+			.main{
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				height: 100%;
+			}
+			.urna{
+				max-width:1100px;
+			}
+			.tela, .teclado{
+				height:400px;
+				margin: 20px;
+				background: white;
+			}
+			.tela{
+				flex: 8;
+				padding: 40px;
+				box-sizing: border-box;
+				font-size: 20px;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.input-foto{
+				justify-content: space-between
+			}
+			
+			.foto-nome{
+				flex-direction: column;
+				align-items: center
+			}
+			.foto-nome img{
+				margin: 0 0 10px 0;
+			}
+			.info{
+				justify-content: center;
+				height: 60px;
+				border-top: 0.5px solid #ddd;
+				
+			}
+			.teclado{
+				flex: 5;
+				flex-direction: column;
+				padding: 20px;
+				box-sizing: border-box;
+				justify-content: space-between;
+			}
+			.numeros{
+				justify-content: center;
+				flex-wrap:wrap;
+			}
+			button, .teclado div:nth-child(2) input{
+				width: 75px;
+				height: 47px;
+				background-color: #15181C;
+				text-align: left;
+				color: #ddd;
+				border-radius: 5px;
+				border: none;
+				cursor: pointer;
+				margin: 10px;
+			}
+			.numeros button{
+				font-size:30px;
+			}
+			.teclado div:nth-child(2){
+				display: flex;
+				justify-content: center
+			}
+			.teclado div:nth-child(2) button, .teclado div:nth-child(2) input{
+				flex: 1;
+				display: flex;
+				height: 61px;
+				justify-content: center;
+				align-items: center;
+				font-weight: 700;
+				color: #181818;
+			}
+			.teclado div:nth-child(2) button:nth-child(1){
+				background:#fff;
+				border: .5px solid #ddd;
+			}
+			.teclado div:nth-child(2) button:nth-child(2){
+				background:#F58952;
+			}
+			.teclado div:nth-child(2) input{
+				background: #2BB162;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="main flex">
+			<div>Nº título <input type="number" name="nTitEleitor"/></div>
+			<form class="flex urna">
+				<div class="tela flex">
+					<div class="input-foto flex">
+						<div>
+							<h3>PRESIDENTE</h3>
+							<input type="number" name="nNum"/>
+						</div>
+						<div class="flex foto-nome">
+							<img src="candidato.jpg" width="150px"/>
+							<div id="nome"></div>
+						</div>
+					</div>
+					
+					<div class="info flex">
+						<h1>CONFIRMA SEU VOTO</h1>
+					</div>
+				</div>
+				<div class="teclado flex">
+					<div class="numeros flex">
+						<button>1</button>
+						<button>2</button>
+						<button>3</button>
+						<button>4</button>
+						<button>5</button>
+						<button>6</button>
+						<button>7</button>
+						<button>8</button>
+						<button>9</button>
+						<button>0</button>
+					</div>
+					<div>
+						<button>BRANCO</button>
+						<button>CORRIGE</button>
+						<input type="submit" value="CONFIRMA"/>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
